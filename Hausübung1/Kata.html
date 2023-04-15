@@ -5,30 +5,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kata</title>
+    <title>Szöllösi Kata</title> 
 </head>
 
 <body>
+
 <header>
-    <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/attachment_98891896-e1562597246285.jpg?auto=format&q=60&fit=max&w=930" height="400" width="400" alt="bild">
+    <img src="https://99designs-blog.imgix.net/blog/wp-content/uploads/2019/05/attachment_98891896-e1562597246285.jpg?auto=format&q=60&fit=max&w=930" height="350" width="350" alt="bild">
     <h1>Travel with my love</h1>
     <nav>
+        <details>
+        <summary>Wo wir gewesen sind</summary>
         <ul>
-            <li><a href="">Thailand</a></li>
-            <li><a href="">Venice</a></li>
+            <li><a href="http://127.0.0.1:5500/Haus%C3%BCbung1/thailand.html" target="_blank">Thailand</a></li>
+            <li><a href="">Italien</a></li>
+            <li><a href="">Bulgarien</a></li>
+            <li><a href="">Kroatien</a></li>
         </ul>
+    </details>
     </nav>
 </header>
-<main>
+
+<section>
     <article>
-        <h2>Unsere Reisen</h2>
-        <p>Wir lieben es zu reisen und versuchen, so viel wie möglich zu reisen. Wir wollen unserem Kind die Welt zeigen und neue Kulturen kennenlernen.</p>
-        <p>Leider war die letzte Zeit wegen Corona und der Inflation sehr schwierig, aber hoffentlich wird alles wieder gut.</p>
-        <p>Wir machen jetzt viele Wanderungen und versuchen, die Stadt besser kennen zu lernen.</p>
+        <h2>Reisen</h2>
+        <p>Wir lieben es zu reisen und versuchen, so viel wie möglich. Wir wollen unserem Kind die Welt zeigen und neue Kulturen kennenlernen. 
+            Leider war die letzte Zeit wegen Corona und der Inflation sehr schwierig, aber hoffentlich wird alles wieder gut. 
+            Wir machen jetzt viele Wanderungen und versuchen, die Stadt besser kennen zu lernen.</p>
     </article>
-</main>
+</section>
+<section>
+    <h3>Wo wir gewandert sind</h3>
+    <ul>
+        <li>Salzkammergut</li>
+        <dd>Langbathseen</dd>
+        <dd>Offensee</dd>
+        <dd>Schwarzensee</dd>
+        <dd>Hallstatt</dd>
+        <dd>Nixenfall</dd>
+        <li>Steiermark</li>
+        <dd>Reiteralm</dd>
+        <dd>Dachstein</dd>
+        <dd>Zoo Schmiding</dd>
+        <li>Salzburgerland</li>
+        <dd>Sankt Wolfgang</dd>
+        <dd>Strobl</dd>
+        <dd>Zoo Salzburg</dd>
+        <dd>Lammerklamm</dd>
+        <dd>Gollinger Wasserfall</dd>
+        <li>Kroatien</li>
+        <dd>Plitvice Lakes National Park</dd>
+
+    </ul>
+</section>
+<section>    
+<h5>Möchtest du wissen Wo bist du ganz genau? Dann Try it!</h5>
+
+<button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+
+<script>
+var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Breitengrad: " + position.coords.latitude + 
+  "<br>Längengrad: " + position.coords.longitude;
+}
+</script>
+</section>
+
 <footer>
-    <p>© 2023 by Kata Szöllösi</p>
+    <p>© - Kata Szöllösi - 2023</p>
 </footer>
 </body>
 
